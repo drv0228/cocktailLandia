@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# cocktailLandia app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to cocktailLandia app. 
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This app is a guide, inspiration, recolection of the best cocktails of the world. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app will be designed for individuals who want to learn, play, discover, or prepare delicious cocktails. Users should be able to view the top 10 list of cocktails from around the world as soon as they open the app. When they click on a country, they can see the cocktail name, instructions to prepare it, and the ingredients. Additionally, users can find a link at the top of the page that allows them to go to a second page where they can search for drinks with specific ingredients. This feature enables them to find different cocktails using the ingredients they currently have at home, making it convenient for them to use what's available.
 
-### `npm test`
+##### Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+10 Top Cocktails Around the world in the Home-Page /  Search Functionality: A robust feature to help users see more cocktails with specific ingredients in Discover-Page.
 
-### `npm run build`
+###### Installation Instruccions 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To see or install cocktailLandiaApp in your local machine , follow these steps: 
+1. You need to git clone the repositories cocktail-landia and cocktail-landia-api; 
+2. Navigate to the project directory.
+3. Do not forget to make npm i before run them. 
+4. To use the free API at Discover-Page for the Search Functionality you need to generate your own APIkey through: https://www.thecocktaildb.com/api.php
+5. You can see the port on use is 8080 and you can change it at the file .env. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###### Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+REACT, JS, HTML, CSS, SASS, Responsive Sites, Node.js, Express, internal and external APIs.
 
-### `npm run eject`
+###### Data
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+My data are coming from Google Search of the top cocktails of the world and from CocktailDB API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+###### APIs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I am using the Cocktail API . The API and site will always remain free to access at its basic level. If you love our service and want extra features you can sign up as a Patreon supporter for $3. You can cancel anytime. This allows them to pay for the servers and bandwidth and develop new features and content. You can use the test API key "1" during development of your app or for educational use (see test links:https://www.thecocktaildb.com/api.php). However you must sign up to Patreon if you want a production API key if releasing publicly on an appstore.
 
-## Learn More
+###### Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The site was developed to be reactive and to change the format at three sizes:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+less than 786 pixels > then use mobile formatting
+between 786 pixels and less than 1280 pixels > then use tablet formatting
+more than 1280 pixels > then use desktop formatting
 
-### Code Splitting
+This site is using a backend API that can be checked in the Git repository: https://github.com/drv0228/cocktail-landia-api
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###### Nice-to-haves
 
-### Analyzing the Bundle Size
+My future plan includes building additional features and continuing learning developing the following features:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+###### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We welcome contributions! Please send me an email for details at drv0228@gmail.com and how you want to contribute.
