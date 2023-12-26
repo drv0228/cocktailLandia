@@ -1,0 +1,71 @@
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  background-color: $s-green;
+}
+.nav-bar__container1 {
+  background-color: $p-green;
+  display: flex;
+  @include tablet {
+    padding: 0rem;
+  }
+  @include desktop {
+    padding: 0.2rem;
+  }
+  @include biggestdesktop {
+    height: 4rem;
+  }
+}
+
+.nav-bar__container2 {
+  background-color: $s-green;
+  height: 1002rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &:hover {
+    border-bottom: 1px solid $p-pink;
+    }
+  @include tablet {
+    padding: 0rem 0.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include biggestdesktop {
+    flex-direction: row;
+  }
+}
+.nav-bar__link {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: $p-green;
+}
+.logo__app {
+    background-color: $p-green;
+    font-family: dayify;
+    margin-left: 3rem;
+    @include letters-fonts(3.5rem, 700, $s-green);
+&:hover {
+color: $p-pink;
+}
+}
+.nav-bar__link--two {
+    background-color: $p-green;
+    font-family: dayify;
+    &:hover {
+        color: $p-pink;
+        }
+    @include letters-fonts(3.5rem, 700, $s-green);
+    margin-left: 3rem;
+}
+
+
