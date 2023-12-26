@@ -1,0 +1,55 @@
+@use "./__variables" as *;
+@use "./__global" as *;
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin bigdesktop {
+    @media (min-width: $bigdesktop-breakpoint) {
+      @content;
+    }
+  }
+
+@mixin biggestdesktop {
+    @media (min-width: $biggestdesktop-breakpoint) {
+      @content;
+    }
+  }
+
+@mixin letters-fonts($size, $weight, $color){
+  font-size: $size rem;
+  font-weight: $weight;
+  color: $color;
+}
+
+ @mixin flex-box( $display, $direction, $content, $items) { 
+    display: $direction;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
+
+@mixin dimensions( $w, $h){
+  width: $w;
+  height: $h;
+}
+
+@mixin margin-padding ($mt, $mr, $mb, $ml, $pt, $pr, $pb, $pl) {
+   margin: mt, $mr, $mb, $ml;
+   padding: $pt, $pr, $pb, $pl;
+}
