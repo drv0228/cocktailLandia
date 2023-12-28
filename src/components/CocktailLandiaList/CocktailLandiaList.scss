@@ -4,17 +4,28 @@
 .cocktailLandia-section {
     height: 50vh;
 }
-.logo__container {
+.allproducts__list {
+    text-align: left;
+    font-weight: 700;
+    color: $p-silver;
     display: flex;
-    align-items: center;
-    margin: 1.7rem;
-}
-.logo__image {
-    width: 4vw;
-}
-.logo__title {
-    font-size: 3rem;
-    font-family: Open;
-    font-weight: 300;
-    opacity: 70%;
-}
+    flex-direction: column;
+    margin: 0 auto;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 95%;
+      padding: 2rem 0rem 1rem 0rem;
+    }
+    @include desktop {
+      width: 85%;
+    }
+    @include bigdesktop {
+      width: 85%;
+      padding: 1rem 0rem;
+    }
+    @include biggestdesktop {
+      height: 60vh;
+    }
+  }

@@ -1,0 +1,81 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+
+.cocktails-items__section {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    width: 98%;
+    background-color: $s-gray;
+    margin: 3px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+    &:hover {
+      border: 0.8px solid $s-black;
+    }
+    @include tablet {
+      margin: 10px;
+      padding: 1rem;
+      width: 45%;
+    }
+    @include desktop {
+      padding: 1rem 2rem;
+      width: 35%;
+    }
+    @include bigdesktop {
+      margin-top: 3rem;
+      width: 29%;
+    }
+    @include biggestdesktop {
+      width: 30%;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .link__cocktails {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+  }
+.cocktail__image {
+    width: 9rem;
+    height: 12rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    background-color: $p-white;
+    @include bigdesktop {
+      width: 60%;
+      margin-right: 0.5rem;
+    }
+    @include biggestdesktop {
+      margin: 2rem 0.5rem;
+      background-color: $p-white;
+    }
+  }
+  .cocktail__details {
+    width: 70%;
+    @include biggestdesktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .cocktail__name {
+    font-weight: 700;
+    margin: 0;
+    @include biggestdesktop {
+      font-size: 1.3rem;
+    }
+  }
+  .cocktail__bornIn {
+    margin: 0;
+    color: $s-black;
+    font-weight: 700;
+    @include biggestdesktop {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }

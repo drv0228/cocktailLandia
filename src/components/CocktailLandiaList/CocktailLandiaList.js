@@ -1,22 +1,23 @@
 import "./CocktailLandiaList.scss";
 import "../CocktailsItems/CocktailsItems";
-import { Link } from "react-router-dom";
-import logo from "../../assets/icons/cocktailLandia-logo.svg";
+import CocktailsItems from "../CocktailsItems/CocktailsItems";
 
-const CocktailLandiaList = () => {
+
+const CocktailLandiaList = ({cocktails}) => {
+
+  const displayCocktails = cocktails.map((cocktail) => (
+    <CocktailsItems
+      cocktailId={cocktail.id}
+      cocktail={cocktail}
+      image={cocktail.image}
+      name={cocktail.name}
+      bornIn={cocktail.original}
+    />
+  ));
+
   return (
   <section className="cocktailLandia-section">
-    <div className="logo__container">
-     {/* <Link to="/" className="page__link"> */}
-          <img
-            className="logo__image"
-            src={logo}
-            alt={`Logo that represent the company website`}
-          />
-        {/* </Link> */}
-        <p className="logo__title">cocktailLandia</p>
-        </div>
-        {/* <CocktailsItems /> */}
+     <div className="allcocktails__list">{displayCocktails}</div>
   </section>
   );
 };

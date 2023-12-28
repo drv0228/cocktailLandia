@@ -1,0 +1,17 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    margin: 1.7rem;
+}
+.logo__image {
+    width: 4vw;
+}
+.logo__title {
+    font-size: 3rem;
+    font-family: Open;
+    font-weight: 300;
+    opacity: 70%;
+}
