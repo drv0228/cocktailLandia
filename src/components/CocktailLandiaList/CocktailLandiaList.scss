@@ -1,10 +1,8 @@
 @use "../../styles/partials/__variables" as *;
 @use "../../styles/partials/__mixins" as *;
 
-.cocktailLandia-section {
-    height: 50vh;
-}
-.allproducts__list {
+
+.allcocktails__list {
     text-align: left;
     font-weight: 700;
     color: $p-silver;

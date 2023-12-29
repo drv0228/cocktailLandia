@@ -7,11 +7,17 @@
     margin: 1.7rem;
 }
 .logo__image {
+    width: 10vw;
+    @include tablet {
     width: 4vw;
+    }
 }
 .logo__title {
-    font-size: 3rem;
-    font-family: Open;
-    font-weight: 300;
+    font-size: 2rem;
     opacity: 70%;
+    @include tablet {
+    font-size: 3rem;
+    font-weight: 300;
+    
+    }
 }
