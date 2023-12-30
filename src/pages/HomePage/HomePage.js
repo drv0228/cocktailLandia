@@ -1,10 +1,11 @@
 import "./HomePage.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assets/icons/cocktailLandia-logo.svg";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import CocktailLandiaList from "../../components/CocktailLandiaList/CocktailLandiaList";
 import CocktailsList from "../../components/CocktailsList/CocktailsList";
 
-const HomePage = ({ refresh, cocktails }) => {
+const HomePage = ({ onSearch, refresh, cocktails }) => {
   return (
     <main>
       <div className="logo__container">
@@ -16,6 +17,7 @@ const HomePage = ({ refresh, cocktails }) => {
           />
         {/* </Link> */}
         <p className="logo__title">cocktailLandia</p>
+        <SearchBar onSearch={onSearch} />
         </div>
       <CocktailLandiaList cocktails={cocktails ?? []} refresh={refresh} />
       <CocktailsList />
