@@ -27,8 +27,6 @@
   padding: 0.5rem;
   border-radius: 35px;
   border: 1px solid $p-silver;
-  background-color: $s-white;
-  animation: changeBackground 2.5s infinite;
   @include tablet {
     width: auto;
     font-size: 1rem;
@@ -49,10 +47,14 @@
     text-indent: -28rem;
     @include dimensions(46rem, 4rem);
   }
-  &:active {
-    border-color: $p-pink;
-  }
 }
+.search-bar__input:focus {
+    border: 1px solid $s-blue; 
+  }
+.search-bar__input.valid {
+    border: 1px solid $s-silver; 
+  }
+
 .search__button {
   border-radius: 35px;
   border: 1px solid $p-white;
@@ -66,9 +68,6 @@
   background-position: center;
   right: 0.6rem;
   top: 5.8rem;
-  &:hover {
-    background-color: $s-silver;
-  }
   @include tablet {
     @include dimensions(2.6rem, 2.6rem);
     right: 0.7rem;
