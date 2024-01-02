@@ -1,0 +1,61 @@
+@use "../../styles/partials/_variables" as *;
+@use "../../styles/partials/_mixins" as *;
+
+.modal-overlay {
+  position: fixed;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cocktail__modal {
+
+  background: linear-gradient(to right, #DDA0DD, #87CEFA);;;
+  padding: 1rem;
+  max-width: 200px;
+  height: 5vh;
+  // border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  @include tablet {
+    max-width: 200px;
+  }
+  @include laptop {
+    max-width: 270px;
+  }
+  @include bigdesktop {
+    max-width: 320px;
+  }
+  @include bigdesktop {
+    max-width: 520px;
+  }
+  &:active {
+    border: 5px solid $p-green;
+  }
+}
+ 
+  .modal__link {
+    text-decoration: none;
+    background-color: none;
+    font-weight: 700;
+    border-radius: 20%;
+    padding: .2rem;
+    @include bigdesktop {
+      font-size: large;
+    }
+  }
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+  }

@@ -6,13 +6,13 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    background-color: $s-gray;
+    background-color: $s-pink;
     margin: 1rem 1rem;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      border: 0.8px solid $s-black;
+      border: 0.8px solid $s-white;
     }
     @include tablet {
       margin: 10px;
@@ -61,6 +61,7 @@
     width: 100%;
    margin: 0;
    border-radius: 10px;
+   background: linear-gradient(to right, #DDA0DD, #87CEFA);
     @include biggestdesktop {
       display: flex;
       flex-direction: column;
@@ -70,7 +71,9 @@
   .cocktail__name {
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: $s-silver;
+    // background-color: $s-silver;
+    background: linear-gradient(to right, #DDA0DD, #87CEFA);
+
     margin: 0;
     padding: .2rem;
     @include biggestdesktop {
@@ -82,7 +85,9 @@
     color: $s-black;
     padding-bottom: .2rem;
     font-size: 0.7rem;
-    background-color: $s-silver;
+    // background-color: $s-silver;
+    background: linear-gradient(to right, #DDA0DD, #87CEFA);
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     @include biggestdesktop {
       font-size: 1.5rem;

@@ -3,7 +3,7 @@ import "../CocktailsItems/CocktailsItems";
 import CocktailsItems from "../CocktailsItems/CocktailsItems";
 
 
-const CocktailLandiaList = ({cocktails}) => {
+const CocktailLandiaList = ({cocktails, openModal}) => {
 
   const displayCocktails = cocktails.map((cocktail) => (
     <CocktailsItems
@@ -12,6 +12,7 @@ const CocktailLandiaList = ({cocktails}) => {
       image={cocktail.image}
       name={cocktail.name}
       bornIn={cocktail.original}
+      openModal={openModal}
     />
   ));
 

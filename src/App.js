@@ -5,10 +5,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import CocktailModal from "./components/CocktailModal/CocktailModal";
 
 function App() {
   const [cocktails, setCocktails] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   const url = "http://localhost:8080/cocktails";
 
@@ -40,6 +42,9 @@ function App() {
     }
   };
 
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <section>
       <BrowserRouter>
@@ -50,12 +55,20 @@ function App() {
               <HomePage
                 refresh={handleRefresh}
                 onSearch={handleSearch}
+                openModal={openModal}
                 cocktails={searchResults.length > 0 ? searchResults : cocktails}
               />
             }
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        {isModalOpen && (
+          <CocktailModal
+           cocktails={cocktails}
+           closeModal={closeModal}
+            
+          />
+        )}
       </BrowserRouter>
     </section>
   );
