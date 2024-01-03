@@ -27,7 +27,7 @@ const CocktailModal = ({ cocktails, closeModal }) => {
         src={findCocktail?.image}
         alt={`A cocktail named ${findCocktail?.name} from ${findCocktail?.bornIn}`}
         className="cocktail__image--modal" /></div>
-      <div className="cocktail__details">
+      <div className="cocktail__details--modal">
         <p className="cocktail__name--modal">{findCocktail?.name}</p>
         <p className="cocktail__bornIn--modal">{findCocktail?.bornIn}</p>
         <h2>Ingredients that you need:</h2>

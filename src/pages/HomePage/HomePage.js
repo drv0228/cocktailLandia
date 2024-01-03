@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/icons/cocktailLandia-logo.svg";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import CocktailLandiaList from "../../components/CocktailLandiaList/CocktailLandiaList";
-import CocktailsList from "../../components/CocktailsList/CocktailsList";
+
 
 const HomePage = ({ onSearch, refresh, cocktails, openModal }) => {
   return (
@@ -21,7 +21,7 @@ const HomePage = ({ onSearch, refresh, cocktails, openModal }) => {
         <SearchBar onSearch={onSearch} /></div>
         
         <CocktailLandiaList cocktails={cocktails ?? []} refresh={refresh} openModal={openModal} />
-        <CocktailsList />
+     
     </main>
   );
 };
