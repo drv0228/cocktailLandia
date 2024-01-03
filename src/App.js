@@ -60,14 +60,18 @@ function App() {
               />
             }
           />
+          <Route path="/cocktail/:cocktailId"
+          element={
+            <CocktailModal 
+            cocktails={searchResults.length > 0 ? searchResults : cocktails} 
+            closeModal={closeModal}
+            />
+          }
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         {isModalOpen && (
-          <CocktailModal
-           cocktails={cocktails}
-           closeModal={closeModal}
-            
-          />
+          <CocktailModal />
         )}
       </BrowserRouter>
     </section>
