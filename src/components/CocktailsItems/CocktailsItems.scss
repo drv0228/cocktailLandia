@@ -18,18 +18,17 @@
       margin: 10px;
       width: 45%;
     }
+    @include laptop {
+      margin: 0.3rem 0.2rem;
+      width: 20%;
+    }
     @include desktop {
-      width: 35%;
+      margin: 0.9rem 0.5rem;
+      width: 18%;
     }
     @include bigdesktop {
-      margin-top: 3rem;
-      width: 29%;
-    }
-    @include biggestdesktop {
-      width: 30%;
-      margin: 1rem;
-      display: flex;
-      flex-direction: column;
+      margin: 3rem;
+      width: 20%;
     }
   }
 
@@ -42,6 +41,7 @@
 .image__container {
     width: 100%;
     height: 12rem;
+    padding: 0.2rem;
     background-color: $p-white;
     border-radius: 10px;
     display: flex;
@@ -52,39 +52,37 @@
     height: 100%;
     border-radius: 4px;
     background-color: $p-white;
-    @include bigdesktop {
-      width: 60%;
-      margin-right: 0.5rem;
+    @include laptop {
+      width: 99%;
     }
     @include biggestdesktop {
-      margin: 2rem 0.5rem;
+      width: 100%;
     }
   }
   .cocktail__details {
    width: 100%;
    margin: 0;
    border-radius: 10px;
-//    margin: 0.4rem;
-    @include biggestdesktop {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   }
   .cocktail__name {
     font-weight: bolder;
-    // font-family: Verdana, Geneva, Tahoma, sans-serif;
-    // margin: 0;
     padding: .2rem;
+    @include laptop {
+      margin: 0rem;
+      padding: 0rem;
+    }
     @include biggestdesktop {
       font-size: 1.3rem;
     }
   }
   .cocktail__bornIn {
-    // margin: 0;
     color: $s-black;
     padding-bottom: .2rem;
     font-size: 0.7rem;
+    @include laptop {
+      margin-top: 0rem;
+      padding-top: 0rem;
+    }
     @include biggestdesktop {
       font-size: 1.5rem;
       padding: 1rem;

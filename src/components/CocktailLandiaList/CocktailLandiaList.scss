@@ -16,14 +16,15 @@
       width: 95%;
       padding: 2rem 0rem 1rem 0rem;
     }
-    @include desktop {
-      width: 85%;
+    @include laptop {
+      padding-top: 0rem;
     }
-    @include bigdesktop {
-      width: 85%;
-      padding: 1rem 0rem;
+    @include desktop {
+      width: 100%;
+      margin: 5rem 0.1rem;
     }
     @include biggestdesktop {
-      height: 60vh;
+      margin-left: 8rem;
+      width: 90%;
     }
   }

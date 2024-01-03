@@ -5,17 +5,17 @@
 .search-bar {
   display: flex;
   border-radius: 35px;
-  @include tablet {
-    margin: 0rem 1rem;
+  @include laptop {
+    margin-right: 3.5rem;
   }
   @include desktop {
-    padding-right: 0.5rem;
+    margin-right: 1rem;
   }
   @include bigdesktop {
     @include dimensions(36rem, 3rem);
   }
   @include biggestdesktop {
-    align-items: center;
+    margin-right: 2.4rem;
     @include dimensions(46rem, 4rem);
   }
 }
@@ -28,9 +28,8 @@
   border-radius: 35px;
   border: 1px solid $p-silver;
   @include tablet {
-    width: auto;
+    margin: 0rem;
     font-size: 1rem;
-    margin: 0.6rem;
     text-indent: -9rem;
     @include dimensions(20rem, 3rem);
   }
@@ -61,7 +60,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../../assets/icons/search.svg");
-
   position: absolute;
   cursor: pointer;
   @include dimensions(2.3rem, 2.3rem);
@@ -70,25 +68,27 @@
   top: 5.8rem;
   @include tablet {
     @include dimensions(2.6rem, 2.6rem);
-    right: 0.7rem;
+    right: 1rem;
     top: 1.5rem;
   }
   @include laptop {
-    right: 16rem;
-    top: 1.9rem;
+    right: 3.6rem;
+    top: 1.8rem;
   }
   @include desktop {
-    right: 1rem;
-    top: 3rem;
+    @include dimensions(2.3rem, 2.3rem);
+    right: 1.1rem;
+    top: 2.3rem;
   }
   @include bigdesktop {
-    right: 2.3rem;
-    top: 3rem;
+    @include dimensions(2.8rem, 2.8rem);
+    right: 1.1rem;
+    top: 2.3rem;
   }
   @include biggestdesktop {
-    @include dimensions(2.9rem, 2.9rem);
-    right: 3rem;
-    top: 4rem;
+    @include dimensions(3.8rem, 3.8rem);
+    right: 2.5rem;
+    top: 3.2rem;
   }
 }
 

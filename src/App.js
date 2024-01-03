@@ -13,6 +13,7 @@ function App() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const url = "http://localhost:8080/cocktails";
+  const url2 = "";
 
   useEffect(() => {
     async function getCocktails() {

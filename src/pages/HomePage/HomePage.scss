@@ -6,7 +6,7 @@
         display: flex;
         align-items: center;
     }
-    @include desktop {
+    @include laptop {
         justify-content: space-between;
     }
 }
