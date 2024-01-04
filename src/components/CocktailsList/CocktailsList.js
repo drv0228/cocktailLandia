@@ -19,7 +19,7 @@ const CocktailsList = ({ newCocktails, openModal }) => {
   
     return (
       <section className="cocktails-section">
-        <div className="allcocktails__list">{displayCocktails}</div>
+        <div className="cocktails-page__allcocktails">{displayCocktails}</div>
       </section>
     );
   };

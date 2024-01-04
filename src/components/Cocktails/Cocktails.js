@@ -4,20 +4,20 @@ import "./Cocktails.scss";
 const Cocktails = ({ cocktailId, cocktail, image, name }) => {
   return (
     <>
-     <div className="cocktails-items__section">
-        <div className="image__container">
+     <div className="cocktails-page__section">
+        <div className="cocktails-page__icontainer">
         {/* <Link to={`/cocktail/${cocktailId}`} className="link__cocktails"> */}
             <img
             src={image}
             alt={`A cocktail named ${name}`}
-            className="cocktail__image"
+            className="cocktails-page__images"
           />
           {/* </Link> */}
         </div>
 
         <div className="cocktail__details">
          
-            <p className="cocktail__name">{name}</p>
+            <p className="cocktails-page__names">{name}</p>
         </div>
       </div> 
     </>

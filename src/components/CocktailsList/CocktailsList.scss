@@ -1,0 +1,31 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+
+
+.cocktails-page__allcocktails {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 95%;
+      padding: 2rem 0rem 1rem 0rem;
+      margin-left: 1rem;
+    }
+    @include laptop {
+        margin-top: 1.5rem;
+    }
+    @include desktop {
+      width: 100%;
+      padding-top: 0rem;
+      margin: 3rem 0.1rem;
+    }
+    @include bigdesktop {
+      margin: 0rem 0.1rem;
+    }
+    @include biggestdesktop {
+      margin: 5rem 8rem;
+      width: 90%;
+    }
+  }
