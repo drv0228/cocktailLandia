@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
+import CocktailsPage from "./pages/CocktailsPage/CocktailsPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import CocktailModal from "./components/CocktailModal/CocktailModal";
 
@@ -12,15 +13,16 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isModalOpen, setModalOpen] = useState(false);
 
+  const apiKey = process.env.REACT_APP_API_KEY;
   const url = "http://localhost:8080/cocktails";
-  const url2 = "";
+  const url2 = `https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=`;
 
   useEffect(() => {
     async function getCocktails() {
       try {
         const response = await axios.get(url);
         setCocktails(response.data);
-        // console.log(cocktails);
+       
       } catch (error) {
         console.error("axios call failed", error);
       }
@@ -34,10 +36,9 @@ function App() {
 
   const handleSearch = async (query) => {
     try {
-      const response = await axios.get(
-        `http://localhost:8080/search?q=${query}`
-      );
-      setSearchResults(response.data);
+      const response = await axios.get(`${url2}${query}`);
+      setSearchResults(response.data.drinks);
+   
     } catch (error) {
       console.error("Error searching for cocktails:", error);
     }
@@ -57,18 +58,19 @@ function App() {
                 refresh={handleRefresh}
                 onSearch={handleSearch}
                 openModal={openModal}
-                cocktails={searchResults.length > 0 ? searchResults : cocktails}
+                cocktails={cocktails}
               />
             }
           />
           <Route path="/cocktail/:cocktailId"
           element={
             <CocktailModal 
-            cocktails={searchResults.length > 0 ? searchResults : cocktails} 
+            cocktails={cocktails}
             closeModal={closeModal}
             />
           }
           />
+          <Route path="/cocktails" element={ <CocktailsPage newCocktails={searchResults} onSearch={handleSearch} />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         {isModalOpen && (

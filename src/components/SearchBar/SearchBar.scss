@@ -29,8 +29,8 @@
   border: 1px solid $p-silver;
   @include tablet {
     margin: 0rem;
-    font-size: 1rem;
-    text-indent: -9rem;
+    // font-size: 1rem;
+    // text-indent: -9rem;
     @include dimensions(20rem, 3rem);
   }
   @include desktop {
@@ -38,12 +38,12 @@
     @include dimensions(34rem, 2.5rem);
   }
   @include bigdesktop {
-    text-indent: -21rem;
+    text-indent: -18rem;
     @include dimensions(36rem, 3rem);
   }
   @include biggestdesktop {
     font-size: 1.5rem;
-    text-indent: -28rem;
+    text-indent: -8rem;
     @include dimensions(46rem, 4rem);
   }
 }

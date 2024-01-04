@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SearchBar.scss";
+import { Link } from "react-router-dom";
 
 const SearchBar = ({ onSearch }) => {
     const [query, setQuery] = useState("");
@@ -13,11 +14,11 @@ const SearchBar = ({ onSearch }) => {
         <input
           type="text"
           className={`search-bar__input ${query ? 'valid' : ''}`}
-          placeholder="Search for more..."
+          placeholder="Search for more based on your ingredients..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button onClick={handleSearch} className="search__button"></button>
+        <Link to={`/cocktails`} className="link__cocktails"><button onClick={handleSearch} className="search__button"></button></ Link>
       </div>
     );
   };
