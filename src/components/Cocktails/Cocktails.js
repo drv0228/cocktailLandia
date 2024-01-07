@@ -1,18 +1,18 @@
 import "./Cocktails.scss";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Cocktails = ({ cocktailId, cocktail, image, name }) => {
+const Cocktails = ({ cocktailId, cocktail, image, name , openDetails}) => {
   return (
     <>
      <div className="cocktails-page__section">
         <div className="cocktails-page__icontainer">
-        {/* <Link to={`/cocktail/${cocktailId}`} className="link__cocktails"> */}
+        <Link to={`/cocktails/${cocktailId}`} className="link__cocktails">
             <img
             src={image}
             alt={`A cocktail named ${name}`}
             className="cocktails-page__images"
           />
-          {/* </Link> */}
+          </Link>
         </div>
 
         <div className="cocktail__details">

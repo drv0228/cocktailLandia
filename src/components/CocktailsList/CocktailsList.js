@@ -2,7 +2,7 @@ import "./CocktailsList.scss";
 import Cocktails from "../Cocktails/Cocktails";
 
 
-const CocktailsList = ({ newCocktails, openModal }) => {
+const CocktailsList = ({ newCocktails, openDetails }) => {
 
     const displayCocktails = Array.isArray(newCocktails)
       ? newCocktails.map((cocktail) => (
@@ -12,7 +12,7 @@ const CocktailsList = ({ newCocktails, openModal }) => {
             cocktail={cocktail}
             image={cocktail.strDrinkThumb}
             name={cocktail.strDrink}
-            openModal={openModal}
+            openDetails={openDetails}
           />
         ))
       : null; 

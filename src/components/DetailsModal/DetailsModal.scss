@@ -1,0 +1,47 @@
+@use "../../styles/partials/__variables" as *;
+@use "../../styles/partials/__mixins" as *;
+
+.detail-modal {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: 30%;
+  }
+}
+.detail-modal__name {
+  font-weight: bolder;
+  padding: 0.2rem;
+  font-size: 1rem;
+  @include biggestdesktop {
+    font-size: 1.3rem;
+  }
+}
+
+.detail-modal__icontainer {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+  @include bigdesktop {
+    padding: 1rem;
+  }
+}
+
+.detail-modal__image {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  @include bigdesktop {
+    width: 60%;
+    padding: 0rem;
+  }
+  @include biggestdesktop {
+    width: 55%;
+  }
+}

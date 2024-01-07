@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import CocktailsList from "../../components/CocktailsList/CocktailsList";
 
 
-const CocktailsPage = ({ onSearch, refresh, newCocktails, openModal }) => {
+const CocktailsPage = ({ onSearch, refresh, newCocktails, openDetails }) => {
   return (
     <main>
       <div className="home-page__navbar">
@@ -20,7 +20,7 @@ const CocktailsPage = ({ onSearch, refresh, newCocktails, openModal }) => {
         <p className="logo__title">cocktailLandia</p></div>
         <SearchBar onSearch={onSearch} /></div>
         
-        <CocktailsList onSearch={onSearch} newCocktails={newCocktails} refresh={refresh} openModal={openModal} />
+        <CocktailsList onSearch={onSearch} newCocktails={newCocktails} refresh={refresh} openDetails={openDetails} />
      
     </main>
   );
