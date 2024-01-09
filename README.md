@@ -13,7 +13,7 @@ The app will be designed for individuals who want to learn, play, discover, or p
 
 ##### Features
 
-10 Top Cocktails Around the world in the Home-Page /  Search Functionality: A robust feature to help users see more cocktails with specific ingredients in Discover-Page.
+10 Top Cocktails Around the world in the Home-Page /  Search Functionality: A robust feature to help users see more cocktails with specific ingredients in Cocktails-Page.
 
 ###### Installation Instruccions 
 
@@ -21,7 +21,7 @@ To see or install cocktailLandiaApp in your local machine , follow these steps:
 1. You need to git clone the repositories cocktail-landia and cocktail-landia-api; 
 2. Navigate to the project directory.
 3. Do not forget to make npm i before run them. 
-4. To use the free API at Discover-Page for the Search Functionality you need to generate your own APIkey through: https://www.thecocktaildb.com/api.php
+4. To use the free API at 2do page "Cocktail-Page" for the Search Functionality you need to generate your own APIkey through: https://www.thecocktaildb.com/api.php
 5. You can see the port on use is 8080 and you can change it at the file .env. 
 
 ###### Tech Stack
@@ -35,7 +35,7 @@ My data are coming from Google Search of the top cocktails of the world and from
 
 ###### APIs
 
-I am using the Cocktail API . The API and site will always remain free to access at its basic level. If you love our service and want extra features you can sign up as a Patreon supporter for $3. You can cancel anytime. This allows them to pay for the servers and bandwidth and develop new features and content. You can use the test API key "1" during development of your app or for educational use (see test links:https://www.thecocktaildb.com/api.php). However you must sign up to Patreon if you want a production API key if releasing publicly on an appstore.
+I also am using the CocktailDB API . The API and site will always remain free to access at its basic level. If you love our service and want extra features you can sign up as a Patreon supporter for $3. You can cancel anytime. This allows them to pay for the servers and bandwidth and develop new features and content. You can use the test API key "1" during development of your app or for educational use (see test links:https://www.thecocktaildb.com/api.php). However you must sign up to Patreon if you want a production API key if releasing publicly on an appstore.
 
 ###### Notes
 
