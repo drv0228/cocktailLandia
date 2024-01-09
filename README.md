@@ -47,11 +47,6 @@ more than 1280 pixels > then use desktop formatting
 
 This site is using a backend API that can be checked in the Git repository: https://github.com/drv0228/cocktail-landia-api
 
-###### Nice-to-haves
-
-My future plan includes building additional features and continuing learning developing the following features:
-
-
 ###### Contributing
 
 We welcome contributions! Please send me an email for details at drv0228@gmail.com and how you want to contribute.
