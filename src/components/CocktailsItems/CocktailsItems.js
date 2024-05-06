@@ -1,7 +1,7 @@
 import "./CocktailsItems.scss";
 import { Link } from "react-router-dom";
 
-const CocktailsItems = ({ cocktailId, cocktail, image, name, bornIn }) => {
+const CocktailsItems = ({ cocktailId, image, name, bornIn }) => {
   return (
     <>
      <div className="cocktails-items__section">

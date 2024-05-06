@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./CocktailModal.scss";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -34,7 +34,7 @@ const CocktailModal = ({ cocktails, closeModal }) => {
         <p className="cocktail__ingredients">{findCocktail?.ingredients}</p>
         <h2>Follow the next steps to prepare it:</h2>
         <p className="cocktail__instructions">{findCocktail?.instructions}</p>
-        <a href={findCocktail?.video} target="_blank"><h2>See a video!</h2></a>
+        <a  rel="noopener" href={findCocktail?.video} target="_blank"><h2>See a video!</h2></a>
       </div>
         </div>
         </div>

@@ -51,7 +51,7 @@ const DetailslModal = ({ newCocktails, closeDetails }) => {
         <p className="cocktail__ingredients">{foundResults[0]?.strIngredient1}, {foundResults[0]?.strIngredient2}, {foundResults[0]?.strIngredient3}, {foundResults[0]?.strIngredient4}. {foundResults[0]?.strIngredient5}</p>
         <h2>Follow the next steps to prepare it:</h2>
         <p className="cocktail__instructions">{foundResults[0]?.strInstructions}</p>
-        <a href="https://www.youtube.com"><h2>See a video!</h2></a>
+        <a rel="noopener" href="https://www.youtube.com"><h2>See a video!</h2></a>
       </div>
         </div>
         </div>
