@@ -16,7 +16,7 @@ const DetailslModal = ({ newCocktails, closeDetails }) => {
           try {
             const response = await axios.get(url);
             setFoundResults(response.data.drinks);
-            console.log(foundResults);
+            // console.log(foundResults);
           } catch (error) {
             console.error("axios call failed", error);
           }
@@ -24,7 +24,7 @@ const DetailslModal = ({ newCocktails, closeDetails }) => {
         getCocktail();
       }, [url, cocktailId]);
 
-    const findCocktail = newCocktails.find((cocktail) => cocktail.idDrink == cocktailId);
+    const findCocktail = newCocktails.find((cocktail) => cocktail.idDrink === cocktailId);
 
     if (!findCocktail) {
         return <NotFoundPage />
