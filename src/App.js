@@ -30,7 +30,8 @@ function App() {
       }
     }
     getCocktails();
-  }, []);
+  }, [url]);
+
 
   const handleRefresh = () => {
     window.location.reload();
