@@ -15,8 +15,9 @@ function App() {
   const [isDetailsOpen, setDetailsOpen] = useState(false);
 
   const apiKey = process.env.REACT_APP_API_KEY;
+  const url = process.env.REACT_APP_URL;
   // const url = "http://localhost:8080/cocktails";
-    const url = "http://cocktaillandia-api.up.railway.app/cocktails";
+  
   const url2 = `https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=`;
 
   useEffect(() => {
