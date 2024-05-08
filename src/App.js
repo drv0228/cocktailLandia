@@ -15,22 +15,25 @@ function App() {
   const [isDetailsOpen, setDetailsOpen] = useState(false);
 
   const apiKey = process.env.REACT_APP_API_KEY;
-  const url = process.env.API_URL;
-  // const url = "http://localhost:8080/cocktails";
+    // const url = "http://localhost:8080/cocktails";
+  const apiUrl = process.env.REACT_APP_API_URL;
+  console.log('Making API call to:', apiUrl);
+
   
   const url2 = `https://www.thecocktaildb.com/api/json/v2/${apiKey}/filter.php?i=`;
 
   useEffect(() => {
     async function getCocktails() {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(apiUrl);
         setCocktails(response.data);
+        console.log('Data received:', response.data);
       } catch (error) {
         console.error("axios call failed", error);
       }
     }
     getCocktails();
-  }, [url]);
+  }, [apiUrl]);
 
 
   const handleRefresh = () => {
