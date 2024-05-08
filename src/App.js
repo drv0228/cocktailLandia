@@ -16,7 +16,7 @@ function App() {
 
   const apiKey = process.env.REACT_APP_API_KEY;
     // const url = "http://localhost:8080/cocktails";
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL || 'https://cocktaillandia-api.up.railway.app/cocktails';
   console.log('Making API call to:', apiUrl);
 
   
@@ -25,9 +25,10 @@ function App() {
   useEffect(() => {
     async function getCocktails() {
       try {
-        const response = await axios.get(apiUrl);
-        setCocktails(response.data);
+        const response = await axios.get(`${apiUrl}`);
         console.log('Data received:', response.data);
+        setCocktails(response.data);
+        
       } catch (error) {
         console.error("axios call failed", error);
       }
